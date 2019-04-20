@@ -1,5 +1,5 @@
 {
-  "name": "riftdb",
+  "name": "jankebot",
   "version": "1.0.0",
   "description": "Discord bot used for displaying random images in specified folders.",
   "main": "index.js",
