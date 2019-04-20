@@ -1,4 +1,4 @@
-# jankebot
+# Random Image Folder to Discord Bot (RIFtDB)
 Discord bot for randomly loading images from different folders.
 
 ## Setup
