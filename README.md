@@ -7,6 +7,8 @@ Discord bot for randomly loading images from different folders.
   There can be an unlimited amount of folders. 
 3. Add/set the names of the folders to config.json under the 'folder' array.
 4. Add your .png image files to the folders. They must be numbered sequentially starting from 1.
+5. Install the required packages by running `npm install`.
+6. Add the bot to your server using [this link](https://discordapi.com/permissions.html).
 5. Enjoy!
 
 ## Commands
