@@ -12,4 +12,4 @@ Discord bot for randomly loading images from different folders.
 5. Enjoy!
 
 ## Commands
-- ![foldername] - attaches a random image from the folder in the directory of index.js.
+- `![foldername]` - attaches a random image from the folder in the directory of index.js.
