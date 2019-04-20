@@ -1,0 +1,5 @@
+{
+    "prefix": "!",
+    "token": "INSERT-DISCORD-TOKEN-HERE",
+    "folder": ["testFolder1, testFolder2"]
+}

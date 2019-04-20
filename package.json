@@ -1,0 +1,29 @@
+{
+  "name": "jankebot",
+  "version": "1.0.0",
+  "description": "Discord bot used for displaying random images in specified folders.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaketanda/jankebot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "random",
+    "image"
+  ],
+  "author": "Jake Tanda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaketanda/jankebot/issues"
+  },
+  "homepage": "https://github.com/jaketanda/jankebot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "fs": "0.0.1-security"
+  }
+}
