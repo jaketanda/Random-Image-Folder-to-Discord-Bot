@@ -1,5 +1,5 @@
 {
-  "name": "jankebot",
+  "name": "riftdb",
   "version": "1.0.0",
   "description": "Discord bot used for displaying random images in specified folders.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaketanda/jankebot.git"
+    "url": "git+https://github.com/jaketanda/Random-Image-Folder-to-Discord-Bot"
   },
   "keywords": [
     "discord",
@@ -19,9 +19,9 @@
   "author": "Jake Tanda",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jaketanda/jankebot/issues"
+    "url": "https://github.com/jaketanda/Random-Image-Folder-to-Discord-Bot/issues"
   },
-  "homepage": "https://github.com/jaketanda/jankebot#readme",
+  "homepage": "https://github.com/jaketanda/Random-Image-Folder-to-Discord-Bot/#readme",
   "dependencies": {
     "discord.js": "^11.4.2",
     "fs": "0.0.1-security"
