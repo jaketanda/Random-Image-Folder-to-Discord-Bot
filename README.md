@@ -10,7 +10,8 @@ Discord bot for randomly loading images from different folders.
 5. Install [node.js](https://nodejs.org/en/).
 5. Install the required packages by running `npm install`.
 6. Add the bot to your server using [this link](https://discordapi.com/permissions.html).
-5. Enjoy!
+7. `node index.js`
+8. Enjoy!
 
 ## Commands
 - `![foldername]` - attaches a random image from the folder in the directory of index.js.
