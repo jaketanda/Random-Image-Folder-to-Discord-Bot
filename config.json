@@ -1,5 +1,5 @@
 {
     "prefix": "!",
-    "token": "INSERT-DISCORD-TOKEN-HERE",
-    "folder": ["testFolder1, testFolder2"]
+    "token": "enter-Token-Here",
+    "folder": ["testFolder1", "testFolder2"]
 }
