@@ -1,3 +1,5 @@
+## NEW BOT [HERE](https://github.com/jaketanda/jankebot)!! Has more features and stuff along with this media sharing stuff. Check it out!
+
 # Random Image Folder to Discord Bot (RIFtDB)
 Discord bot for randomly loading images from different folders.
 
