@@ -1,5 +1,4 @@
 {
     "prefix": "!",
-    "token": "enter-Token-Here",
-    "folder": ["testFolder1", "testFolder2"]
+    "token": "enter-Token-Here"
 }

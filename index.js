@@ -16,33 +16,23 @@ client.on('messageCreate', message => {
     const args = message.content.slice(config.prefix.length).split(/ +/);
     const command = args.shift();
 
-    var number = -1; 
-    var folder = -1; 
+    if (fs.readdirSync('./files/').includes(command)) {
+        fs.readdir('./files/' + command, (err, files) => {
+            folderSize = files.length;
 
-    if (config.folder.includes(command)) {
-        folder = config.folder.indexOf(command);
-
-        fs.readdir('./' + config.folder[folder], (err, files) => {
-            number = files.length;
-
+            // Get selected image number
             if (!args.length) {
-                imageNumber = Math.floor(Math.random() * number) + 1;
+                imageNumber = Math.floor(Math.random() * folderSize) + 1;
             } else {
                 imageNumber = args[0];
 
-                if (imageNumber > number) { 
-                    return message.channel.send("Possible arguments: " + config.prefix + command + " [1-" + number + "]."); 
+                // Invalid image number
+                if (imageNumber > folderSize || imageNumber < 1) { 
+                    return message.channel.send("Possible arguments: " + config.prefix + command + " [1-" + folderSize + "]."); 
                 }
             }
 
-            message.channel.send ({files: ["./" + config.folder[folder] + "\\" + imageNumber + ".png"]} )
-        });
-    } else if (command === "random") {
-        folder = Math.floor(Math.random() * config.folder.length);
-        fs.readdir('./' + config.folder[folder], (err, files) => {
-            number = files.length;
-            imageNumber = Math.floor(Math.random() * number) + 1;
-            message.channel.send ({files: ["./" + config.folder[folder] + "\\" + imageNumber + ".png"]} )
+            message.channel.send ({files: ["./files/" + command + "\\" + files[imageNumber-1]]} )
         });
     }
 });
