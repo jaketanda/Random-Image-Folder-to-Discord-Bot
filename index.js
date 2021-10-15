@@ -16,25 +16,33 @@ client.on('messageCreate', message => {
     const args = message.content.slice(config.prefix.length).split(/ +/);
     const command = args.shift();
 
-    if (fs.readdirSync('./files/').includes(command)) {
-        fs.readdir('./files/' + command, (err, files) => {
-            folderSize = files.length;
-
-            // Get selected image number
-            if (!args.length) {
-                imageNumber = Math.floor(Math.random() * folderSize) + 1;
-            } else {
-                imageNumber = args[0];
-
-                // Invalid image number
-                if (imageNumber > folderSize || imageNumber < 1) { 
-                    return message.channel.send("Possible arguments: " + config.prefix + command + " [1-" + folderSize + "]."); 
-                }
+    fs.readdir('./files/', (err, folders) => {
+        var selectedFolder = null;
+        folders.forEach(folder => {
+            if (command.toLowerCase() == folder.toLowerCase()) {
+                selectedFolder = folder;
             }
-
-            message.channel.send ({files: ["./files/" + command + "\\" + files[imageNumber-1]]} )
         });
-    }
+        if (selectedFolder != null) {
+            fs.readdir('./files/' + selectedFolder, (err, files) => {
+                folderSize = files.length;
+
+                // Get selected image number
+                if (!args.length) {
+                    imageNumber = Math.floor(Math.random() * folderSize) + 1;
+                } else {
+                    imageNumber = args[0];
+
+                    // Invalid image number
+                    if (imageNumber > folderSize || imageNumber < 1) { 
+                        return message.channel.send("Possible arguments: " + config.prefix + command + " [1-" + folderSize + "]."); 
+                    }
+                }
+
+                message.channel.send ({files: ["./files/" + command + "\\" + files[imageNumber-1]]} )
+            });
+        }
+    });
 });
 
 client.login(config.token);
